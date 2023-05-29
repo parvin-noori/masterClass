@@ -1,0 +1,44 @@
+@import "assets/scss/colors";
+
+:root{
+  --primary:#{$primary};
+  --secondary:#{$secondary};
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Figtree,IranSans;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.header{
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+  ul{
+    text-transform: capitalize;
+  }
+
+}
+.slider{
+  img{
+    width: 100%;
+  }
+}
+.btn{
+  border: none!important;
+}
+.categoryBtn.dropdown-toggle{
+  &:after{
+    display: none;
+  }
+}
+.dropdown-menu{
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+  a{
+    padding: 1rem;
+  }
+}

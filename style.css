@@ -1,11 +1,11 @@
 :root {
-  --primary:#272c33;
-  --secondary:#e32652; }
+  --primary: #272c33;
+  --secondary: #e32652; }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Figtree,IranSans; }
+  font-family: Figtree, IranSans; }
 
 a {
   text-decoration: none;
@@ -28,9 +28,21 @@ a {
   display: none; }
 
 .dropdown-menu {
+  text-align: left;
   border: none;
+  max-width: 400px;
+  max-height: 80vh;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
   .dropdown-menu a {
     padding: 1rem; }
+    .dropdown-menu a:active {
+      background-color: var(--bs-dropdown-link-hover-bg); }
+  .dropdown-menu .dropdown-body {
+    border-bottom: 1px solid var(--bs-dropdown-link-hover-bg); }
+  .dropdown-menu button {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 0.8rem;
+    border-radius: 0.5rem; }
 
 /*# sourceMappingURL=style.css.map */

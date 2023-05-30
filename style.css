@@ -68,10 +68,11 @@ input:focus {
   padding: 0.6rem;
   display: block; }
 
-@media (max-width: 768px) {
+@media (max-width: 540px) {
   .trendTabList {
     flex-wrap: nowrap;
-    white-space: nowrap; } }
+    white-space: nowrap;
+    overflow-x: auto; } }
 .trendTabList {
   gap: 1rem;
   display: flex;

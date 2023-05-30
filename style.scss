@@ -123,14 +123,15 @@ input:focus {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width:540px) {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 540px) {
   .trendTabList {
     flex-wrap: nowrap;
     white-space: nowrap;
+    overflow-x: auto;
   }
 }
 

@@ -11,6 +11,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+ul {
+  text-transform: capitalize; }
+
 input:focus {
   box-shadow: none !important; }
 
@@ -18,8 +21,6 @@ input:focus {
   position: relative;
   z-index: 10;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
-  .header ul {
-    text-transform: capitalize; }
 
 .slider img {
   width: 100%; }
@@ -62,5 +63,9 @@ input:focus {
   .dropdown-menu .dropdown-list {
     overflow-y: auto;
     flex-wrap: nowrap; }
+
+.offcanvas ul a {
+  padding: 0.6rem;
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

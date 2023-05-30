@@ -15,17 +15,20 @@ a {
   text-decoration: none;
   color: inherit;
 }
-input:focus{
-  box-shadow: none!important;
+
+ul {
+  text-transform: capitalize;
 }
+
+input:focus {
+  box-shadow: none !important;
+}
+
 .header {
   position: relative;
   z-index: 10;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
 
-  ul {
-    text-transform: capitalize;
-  }
 
 }
 
@@ -78,6 +81,7 @@ input:focus{
           display: flex;
           align-items: center;
           justify-content: space-between;
+
           &:after {
             content: '\f054';
             font-family: "Font Awesome 6 Pro";
@@ -110,3 +114,11 @@ input:focus{
 
 }
 
+.offcanvas {
+  ul {
+    a {
+      padding: 0.6rem;
+      display: block;
+    }
+  }
+}

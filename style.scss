@@ -122,3 +122,39 @@ input:focus {
     }
   }
 }
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 768px) {
+  .trendTabList {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}
+
+.trendTabList {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+
+  button {
+    background-color: #eee !important;
+    padding: 0.7rem 1rem;
+
+    &.active {
+      background-color: transparent !important;
+      border: 1px solid var(--secondary) !important;
+      color: var(--secondary)
+    }
+
+    &:hover {
+
+    }
+  }
+
+  i {
+    margin-right: 1rem;
+  }
+}

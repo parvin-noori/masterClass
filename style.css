@@ -68,4 +68,22 @@ input:focus {
   padding: 0.6rem;
   display: block; }
 
+@media (max-width: 768px) {
+  .trendTabList {
+    flex-wrap: nowrap;
+    white-space: nowrap; } }
+.trendTabList {
+  gap: 1rem;
+  display: flex;
+  justify-content: center; }
+  .trendTabList button {
+    background-color: #eee !important;
+    padding: 0.7rem 1rem; }
+    .trendTabList button.active {
+      background-color: transparent !important;
+      border: 1px solid var(--secondary) !important;
+      color: var(--secondary); }
+  .trendTabList i {
+    margin-right: 1rem; }
+
 /*# sourceMappingURL=style.css.map */

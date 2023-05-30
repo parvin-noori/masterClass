@@ -34,6 +34,7 @@ a {
   max-width: 400px;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
   .dropdown-menu a {
+    white-space: pre-wrap;
     padding: 0.6rem;
     color: inherit !important; }
     .dropdown-menu a:active {

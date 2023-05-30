@@ -30,15 +30,20 @@ a {
 .dropdown-menu {
   text-align: left;
   border: none;
+  overflow: hidden;
   max-width: 400px;
-  max-height: 80vh;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
   .dropdown-menu a {
-    padding: 1rem; }
+    padding: 0.6rem;
+    color: inherit !important; }
     .dropdown-menu a:active {
       background-color: var(--bs-dropdown-link-hover-bg); }
   .dropdown-menu .dropdown-body {
-    border-bottom: 1px solid var(--bs-dropdown-link-hover-bg); }
+    max-height: 65vh; }
+  .dropdown-menu .dropdown-list {
+    border-bottom: 1px solid var(--bs-dropdown-link-hover-bg);
+    overflow-y: auto;
+    flex-wrap: nowrap; }
   .dropdown-menu button {
     background-color: var(--primary) !important;
     color: white !important;

@@ -30,8 +30,13 @@
             <div class="col-auto">
                 <ul class="nav d-flex align-items-center">
                     <li class="me-lg-3 me-2">
-                        <button type="button" class="btn d-flex align-items-center dropdown-toggle categoryBtn p-0"
+                        <button type="button" class="btn d-lg-flex  d-none align-items-center dropdown-toggle categoryBtn p-0"
                                 data-bs-toggle="dropdown" aria-expanded="false">
+                            all categories
+                            <i class="fa-light fa-chevron-down ms-2"></i>
+                        </button>
+                        <button type="button" class="btn d-lg-none  d-flex align-items-center dropdown-toggle categoryBtn p-0"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategory" aria-controls="offcanvasCategory">
                             all categories
                             <i class="fa-light fa-chevron-down ms-2"></i>
                         </button>
@@ -128,9 +133,11 @@
     </div>
 
 </div>
+
+
 <!--responsive menu-->
 <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasResponsiveMenu"
-     aria-labelledby="offcanvasExampleLabel">
+     aria-labelledby="offcanvasCategoryLabel">
     <div class="offcanvas-header border-bottom">
         <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
@@ -149,6 +156,29 @@
             <li><a href="#">support</a></li>
             <li><a href="#">log in</a></li>
         </ul>
+    </div>
+</div>
+
+<!--responsive category-->
+<div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasCategory" aria-labelledby="offcanvasCategoryLabel">
+    <div class="offcanvas-header border-bottom">
+        <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column">
+            <li><a class="dropdown-item" href="#">food</a></li>
+            <li><a class="dropdown-item" href="#">design & style</a></li>
+            <li><a class="dropdown-item" href="#">arts & entertainment</a></li>
+            <li><a class="dropdown-item" href="#">music</a></li>
+            <li><a class="dropdown-item" href="#">business</a></li>
+            <li><a class="dropdown-item" href="#">sports and gaming</a></li>
+            <li><a class="dropdown-item" href="#">writing</a></li>
+            <li><a class="dropdown-item" href="#">science & tech</a></li>
+            <li><a class="dropdown-item" href="#">home & lifestyle</a></li>
+            <li><a class="dropdown-item" href="#">community & government</a></li>
+            <li><a class="dropdown-item" href="#">wellness</a></li>
+        </ul>
+    
     </div>
 </div>
 </body>

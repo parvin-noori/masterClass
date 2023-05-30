@@ -15,7 +15,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+input:focus{
+  box-shadow: none!important;
+}
 .header {
   position: relative;
   z-index: 10;
@@ -59,6 +61,7 @@ a {
       background-color: var(--bs-dropdown-link-hover-bg);
     }
   }
+
   &.category-dropdown {
     button {
       background-color: var(--primary) !important;
@@ -67,6 +70,24 @@ a {
       border-radius: 0.5rem;
     }
   }
+
+  &.search-dropdown {
+    ul {
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &:after {
+            content: '\f054';
+            font-family: "Font Awesome 6 Pro";
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+
   &.category-dropdown .dropdown-body, &.search-dropdown .dropdown-header {
     border-bottom: 1px solid var(--bs-dropdown-link-hover-bg);
 

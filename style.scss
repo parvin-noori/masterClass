@@ -123,7 +123,7 @@ input:focus {
   }
 }
 
-@media (min-width:540px) {
+@media (min-width: 540px) {
 
 }
 
@@ -157,5 +157,27 @@ input:focus {
 
   i {
     margin-right: 1rem;
+  }
+}
+
+.trendingSlide {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(0deg, #191c21 0, rgba(25, 28, 33, .5) 50%, rgba(25, 28, 33, 0) 90%) 50% no-repeat;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .trendingSlideContetn{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: 1rem;
   }
 }

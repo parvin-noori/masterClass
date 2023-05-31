@@ -99,10 +99,19 @@ input:focus {
     right: 0;
     left: 0;
     bottom: 0; }
-  .trendingSlide .trendingSlideContetn {
+  .trendingSlide .trendingSlideContent {
     position: absolute;
     bottom: 0;
     z-index: 1;
-    padding: 1rem; }
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center; }
+    .trendingSlide .trendingSlideContent .separator {
+      width: 1rem;
+      height: 4px;
+      background: white; }
 
 /*# sourceMappingURL=style.css.map */

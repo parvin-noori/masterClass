@@ -15,18 +15,25 @@ $(document).ready(function () {
     new Swiper(".trendingSwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
+        navigation: {
+            nextEl: ".trendingSwiper-button-next",
+            prevEl: ".trendingSwiper-button-prev",
+        },
         breakpoints: {
+            0:{
+                slidesPerView: 1.2,
+            },
             640: {
-                slidesPerView: 2,
+                slidesPerView: 2.2,
             },
             768: {
-                slidesPerView: 4,
+                slidesPerView: 3.2,
             },
             992:{
-                slidesPerView:4,
+                slidesPerView:4.2,
             },
             1024: {
-                slidesPerView: 5,
+                slidesPerView: 4.2,
             },
         },
     });

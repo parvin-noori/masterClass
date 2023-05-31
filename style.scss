@@ -143,6 +143,7 @@ input:focus {
   button {
     background-color: #eee !important;
     padding: 0.7rem 1rem;
+    text-transform: capitalize;
 
     &.active {
       background-color: transparent !important;
@@ -159,7 +160,9 @@ input:focus {
     margin-right: 1rem;
   }
 }
-
+.trendingSwiper{
+  padding-bottom: 2.5rem;
+}
 .trendingSlide {
   border-radius: 1rem;
   overflow: hidden;
@@ -203,7 +206,6 @@ input:focus {
     background: var(--primary);
     width: 3rem;
     height: 3rem;
-    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -261,5 +263,14 @@ input:focus {
   }
 }
 
-//linear-gradient(to right, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 16px, rgba(0, 0, 0, 0) 100%) center center no-repeat
-//linear-gradient(to left, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 16px, rgba(0, 0, 0, 0) 100%) center center no-repeat
+.swiper-pagination{
+  .swiper-pagination-bullet{
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    &.swiper-pagination-bullet-active{
+      width: 1.5rem;
+      background-color: var(--secondary);
+    }
+  }
+}

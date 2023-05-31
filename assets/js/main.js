@@ -19,6 +19,10 @@ $(document).ready(function () {
             nextEl: ".trendingSwiper-button-next",
             prevEl: ".trendingSwiper-button-prev",
         },
+        pagination: {
+            el: ".trendingSwiper-pagination",
+            clickable: true,
+        },
         breakpoints: {
             0:{
                 slidesPerView: 1.2,

@@ -160,4 +160,11 @@ input:focus {
     width: 1.5rem;
     background-color: var(--secondary); }
 
+.explore-btn {
+  padding: 0.8rem 2rem;
+  color: white;
+  border-radius: 10px;
+  text-transform: capitalize;
+  background: var(--primary); }
+
 /*# sourceMappingURL=style.css.map */

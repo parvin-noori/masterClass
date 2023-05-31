@@ -11,6 +11,13 @@ body {
   font-family: Figtree, IranSans;
 }
 
+@mixin button {
+  padding: 0.8rem 2rem;
+  color: white;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -160,9 +167,11 @@ input:focus {
     margin-right: 1rem;
   }
 }
-.trendingSwiper{
+
+.trendingSwiper {
   padding-bottom: 2.5rem;
 }
+
 .trendingSlide {
   border-radius: 1rem;
   overflow: hidden;
@@ -210,17 +219,15 @@ input:focus {
     justify-content: center;
     border-radius: 50%;
 
-    &:hover{
+    &:hover {
       filter: contrast(0.8);
     }
   }
 
 
-
-
 }
 
-.trending-swiper{
+.trending-swiper {
   .swiper-button-prev, .swiper-button-next {
     top: 0;
     height: 100%;
@@ -253,6 +260,7 @@ input:focus {
         }
       }
     }
+
     &.swiper-button-next {
       right: 0;
     }
@@ -263,14 +271,21 @@ input:focus {
   }
 }
 
-.swiper-pagination{
-  .swiper-pagination-bullet{
+.swiper-pagination {
+  .swiper-pagination-bullet {
     width: 5px;
     height: 5px;
     border-radius: 10px;
-    &.swiper-pagination-bullet-active{
+
+    &.swiper-pagination-bullet-active {
       width: 1.5rem;
       background-color: var(--secondary);
     }
   }
+}
+
+.explore-btn {
+  @include button;
+  background: var(--primary);
+
 }

@@ -221,18 +221,40 @@ input:focus {
 @media (min-width: 1200px) {
   .business-banner-img {
     height: 460px; } }
-.review-content .review-content-img img {
-  border-radius: 1rem; }
 .review-content .review-content-text {
   background-color: var(--primary);
   color: white;
-  border-radius: 1rem;
   height: 330px;
   min-height: 300px;
-  padding: 4rem;
-  margin-right: -7rem;
   z-index: 1; }
   .review-content .review-content-text blockquote {
     font-size: 1.3rem; }
+
+@media (min-width: 992px) {
+  .review-content .review-content-text {
+    padding: 4rem; }
+    .review-content .review-content-text blockquote {
+      font-size: 1.3rem; } }
+@media (max-width: 992px) {
+  .review-content .review-content-text {
+    padding: 3rem; }
+    .review-content .review-content-text blockquote {
+      font-size: 1.1rem; } }
+@media (min-width: 768px) {
+  .review-content-img img, .review-content-text {
+    border-radius: 1rem; }
+
+  .review-content-text {
+    margin-right: -7rem; } }
+@media (max-width: 768px) {
+  .review-content {
+    border-radius: 1rem;
+    overflow: hidden; }
+    .review-content .review-content-text {
+      padding: 2rem; }
+
+  .review-content-img img {
+    height: 10rem;
+    object-fit: cover; } }
 
 /*# sourceMappingURL=style.css.map */

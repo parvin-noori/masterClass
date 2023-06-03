@@ -101,11 +101,11 @@ $(document).ready(function () {
                 // slidesPerGroup: 1.2,
             },
             576: {
-                slidesPerView: 2.2,
+                slidesPerView: 1.5,
                 // slidesPerGroup: 2.2,
             },
             768: {
-                slidesPerView: 3.2,
+                slidesPerView: 1,
                 // slidesPerGroup: 3.2,
             },
             992: {

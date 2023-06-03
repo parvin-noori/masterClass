@@ -95,6 +95,10 @@ $(document).ready(function () {
             nextEl: ".reviewsSwiper-button-next",
             prevEl: ".reviewsSwiper-button-prev",
         },
+        pagination: {
+            el: ".reviewsSwiper-pagination",
+            clickable: true,
+        },
         breakpoints: {
             0: {
                 slidesPerView: 1.2,

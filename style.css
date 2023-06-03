@@ -88,7 +88,7 @@ input:focus {
   .CategoryPickerTabList i {
     margin-right: 1rem; }
 
-.trendingSwiper, .cookSwiper {
+.trendingSwiper, .cookSwiper, .reviewsSwiper {
   padding-bottom: 2.5rem; }
 
 .trendingSlide {

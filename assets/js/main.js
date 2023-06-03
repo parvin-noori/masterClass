@@ -26,7 +26,7 @@ $(document).ready(function () {
                 slidesPerView: 1.2,
                 // slidesPerGroup: 1.2,
             },
-            640: {
+            576: {
                 slidesPerView: 2.2,
                 // slidesPerGroup: 2.2,
             },
@@ -65,7 +65,7 @@ $(document).ready(function () {
                 slidesPerView: 1.2,
                 // slidesPerGroup: 1.2,
             },
-            640: {
+            576: {
                 slidesPerView: 2.2,
                 // slidesPerGroup: 2.2,
             },

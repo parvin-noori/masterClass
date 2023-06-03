@@ -165,4 +165,61 @@ input:focus {
 .see-more-btn {
   color: var(--primary); }
 
+.BusinessBanner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 32rem; }
+  .BusinessBanner .business-banner-img {
+    z-index: 1; }
+    .BusinessBanner .business-banner-img img {
+      object-fit: cover; }
+  .BusinessBanner .businessBannerContent-text {
+    width: 22rem; }
+  .BusinessBanner .businessBannerContent {
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .BusinessBanner .businessBannerContent h1 {
+      text-transform: uppercase;
+      letter-spacing: -2px; }
+    .BusinessBanner .businessBannerContent a {
+      padding: 0.8rem 2rem;
+      color: white;
+      border-radius: 10px;
+      text-transform: capitalize;
+      font-weight: bold; }
+      .BusinessBanner .businessBannerContent a.btn {
+        background-color: var(--secondary); }
+  .BusinessBanner .business-banner-bg {
+    height: 80%;
+    width: 100%;
+    background: var(--primary);
+    position: absolute;
+    border-radius: 1rem;
+    z-index: 0; }
+
+@media (max-width: 576px) {
+  .business-banner-img {
+    width: 45%; }
+
+  .BusinessBanner .businessBannerContent-text {
+    width: 80%;
+    text-align: center; } }
+@media (min-width: 576px) {
+  .business-banner-img {
+    height: 240px; }
+
+  .BusinessBanner .businessBannerContent-text {
+    width: 22rem; } }
+@media (min-width: 768px) {
+  .business-banner-img {
+    height: 335px; } }
+@media (min-width: 960px) {
+  .business-banner-img {
+    height: 410px; } }
+@media (min-width: 1200px) {
+  .business-banner-img {
+    height: 460px; } }
+
 /*# sourceMappingURL=style.css.map */

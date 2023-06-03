@@ -168,7 +168,7 @@ input:focus {
   }
 }
 
-.trendingSwiper,.cookSwiper {
+.trendingSwiper, .cookSwiper {
   padding-bottom: 2.5rem;
 }
 
@@ -232,8 +232,8 @@ input:focus {
 
 }
 
-.trending-swiper,.cook-swiper {
-  .trendingSwiper,.cookSwiper {
+.trending-swiper, .cook-swiper {
+  .trendingSwiper, .cookSwiper {
     overflow: visible;
 
   }
@@ -317,4 +317,120 @@ input:focus {
 
 .see-more-btn {
   color: var(--primary);
+}
+
+.BusinessBanner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 32rem;
+
+  .business-banner-img {
+    z-index: 1;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .businessBannerContent-text {
+    width: 22rem;
+  }
+
+  .businessBannerContent {
+    //width: 65%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: -2px;
+
+    }
+
+    a {
+      @include button;
+      font-weight: bold;
+
+      &.btn {
+        background-color: var(--secondary);
+      }
+    }
+  }
+
+  .business-banner-bg {
+    height: 80%;
+    width: 100%;
+    background: var(--primary);
+    position: absolute;
+    border-radius: 1rem;
+    z-index: 0;
+  }
+}
+
+//@media (min-width: 992px) {
+//  .BusinessBanner {
+//    height: 60vh;
+//
+//    .businessBannerContent {
+//      width: 70%;
+//
+//      //left: 10%;
+//      .business-banner-img {
+//        height: 100%;
+//      }
+//    }
+//  }
+//}
+//
+//@media (max-width: 992px) {
+//  .BusinessBanner {
+//    height: 60vh;
+//
+//    .businessBannerContent {
+//
+//      //left: 10%;
+//      .business-banner-img {
+//        width: 50%;
+//      }
+//    }
+//  }
+//}
+@media (max-width: 576px) {
+  .business-banner-img {
+    width: 45%;
+  }
+  .BusinessBanner .businessBannerContent-text{
+    width:80%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .business-banner-img {
+    height: 240px;
+  }
+  .BusinessBanner .businessBannerContent-text{
+    width: 22rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .business-banner-img {
+    height: 335px;
+  }
+}
+
+@media (min-width: 960px) {
+  .business-banner-img {
+    height: 410px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .business-banner-img {
+    height: 460px;
+  }
 }

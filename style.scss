@@ -13,7 +13,7 @@ body {
 
 @mixin button {
   padding: 0.8rem 2rem;
-  color: white;
+  color: white!important;
   border-radius: 10px;
   text-transform: capitalize;
 }

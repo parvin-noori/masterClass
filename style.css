@@ -150,7 +150,7 @@ input:focus {
 
 .explore-btn {
   padding: 0.8rem 2rem;
-  color: white;
+  color: white !important;
   border-radius: 10px;
   text-transform: capitalize;
   background: var(--primary); }
@@ -185,7 +185,7 @@ input:focus {
       letter-spacing: -2px; }
     .BusinessBanner .businessBannerContent a {
       padding: 0.8rem 2rem;
-      color: white;
+      color: white !important;
       border-radius: 10px;
       text-transform: capitalize;
       font-weight: bold; }

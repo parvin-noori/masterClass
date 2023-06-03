@@ -85,4 +85,40 @@ $(document).ready(function () {
             },
         },
     });
+
+
+    // reviews swiper
+    new Swiper(".reviewsSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".reviewsSwiper-button-next",
+            prevEl: ".reviewsSwiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                // slidesPerGroup: 1.2,
+            },
+            576: {
+                slidesPerView: 2.2,
+                // slidesPerGroup: 2.2,
+            },
+            768: {
+                slidesPerView: 3.2,
+                // slidesPerGroup: 3.2,
+            },
+            992: {
+                slidesPerView: 1,
+                // slidesPerGroup: 4.2,
+                // allowTouchMove: false,
+            },
+            1024: {
+                slidesPerView: 1,
+                // slidesPerGroup: 4.2,
+                // allowTouchMove: false,
+            },
+        },
+    });
+
 })

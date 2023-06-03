@@ -221,5 +221,18 @@ input:focus {
 @media (min-width: 1200px) {
   .business-banner-img {
     height: 460px; } }
+.review-content .review-content-img img {
+  border-radius: 1rem; }
+.review-content .review-content-text {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 1rem;
+  height: 330px;
+  min-height: 300px;
+  padding: 4rem;
+  margin-right: -7rem;
+  z-index: 1; }
+  .review-content .review-content-text blockquote {
+    font-size: 1.3rem; }
 
 /*# sourceMappingURL=style.css.map */

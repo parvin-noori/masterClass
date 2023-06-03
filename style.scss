@@ -13,7 +13,7 @@ body {
 
 @mixin button {
   padding: 0.8rem 2rem;
-  color: white!important;
+  color: white !important;
   border-radius: 10px;
   text-transform: capitalize;
 }
@@ -402,8 +402,8 @@ input:focus {
   .business-banner-img {
     width: 45%;
   }
-  .BusinessBanner .businessBannerContent-text{
-    width:80%;
+  .BusinessBanner .businessBannerContent-text {
+    width: 80%;
     text-align: center;
   }
 }
@@ -412,7 +412,7 @@ input:focus {
   .business-banner-img {
     height: 240px;
   }
-  .BusinessBanner .businessBannerContent-text{
+  .BusinessBanner .businessBannerContent-text {
     width: 22rem;
   }
 }
@@ -432,5 +432,31 @@ input:focus {
 @media (min-width: 1200px) {
   .business-banner-img {
     height: 460px;
+  }
+}
+
+.review-content {
+  .review-content-img {
+    img {
+
+      border-radius: 1rem;
+    }
+
+  }
+
+  .review-content-text {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 1rem;
+    height: 330px;
+    min-height: 300px;
+    padding: 4rem;
+    margin-right: -7rem;
+    z-index: 1;
+
+
+    blockquote {
+      font-size: 1.3rem;
+    }
   }
 }

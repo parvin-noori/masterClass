@@ -41,6 +41,25 @@ input:focus {
 }
 
 .slider {
+  //position: relative;
+
+  //&:after {
+  //  position: absolute;
+  //  content: '';
+  //  background: linear-gradient(
+  //                  to top,
+  //                  rgba(0, 0, 0, 1) 0,
+  //                  rgba(0, 0, 0, 0.6) 25%,
+  //                  rgba(0, 0, 0, 0) 45%
+  //  ) center no-repeat;
+  //  right: 0;
+  //  left: 0;
+  //  bottom: 0;
+  //  top: 0;
+  //  z-index: 1;
+  //
+  //}
+
   img {
     width: 100%;
   }
@@ -210,7 +229,7 @@ input:focus {
 .swiper-button-prev, .swiper-button-next {
 
   &:after {
-    content: '';
+    content: '' !important;
   }
 
   //i {
@@ -520,10 +539,12 @@ input:focus {
     margin-top: 3rem;
   }
 }
-.accordion-title{
+
+.accordion-title {
   font-size: 1.2rem;
   text-transform: capitalize;
 }
+
 #faqAccordion {
 
   .accordion-item {
@@ -556,40 +577,44 @@ input:focus {
 
       &:not(.collapsed)::after {
         content: '\f077';
-      font-family: "Font Awesome 6 Pro";
+        font-family: "Font Awesome 6 Pro";
 
       }
     }
   }
 }
-.footer{
-  .footer-title{
+
+.footer {
+  .footer-title {
     font-size: inherit;
     text-transform: capitalize;
     font-weight: bold;
   }
 
-  ul{
-    li{
+  ul {
+    li {
       margin-bottom: 1rem;
-      a{
-        color: inherit!important;
-        &:hover{
-          text-decoration:underline;
+
+      a {
+        color: inherit !important;
+
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
   }
 }
+
 @media(max-width: 768px) {
-  .footer-download{
-    li{
-      margin-bottom: 0!important;
+  .footer-download {
+    li {
+      margin-bottom: 0 !important;
     }
   }
-  .footer-social{
-    li{
-      i{
+  .footer-social {
+    li {
+      i {
         font-size: 1.6rem;
       }
     }

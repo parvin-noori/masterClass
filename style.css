@@ -129,7 +129,7 @@ input:focus {
   border-radius: 50%;
   margin-top: 0; }
   .swiper-button-prev:after, .swiper-button-next:after {
-    content: ''; }
+    content: '' !important; }
   .swiper-button-prev:hover, .swiper-button-next:hover {
     filter: contrast(0.8); }
 

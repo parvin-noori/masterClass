@@ -562,3 +562,22 @@ input:focus {
     }
   }
 }
+.footer{
+  padding:5rem 0;
+  .footer-title{
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  ul{
+    li{
+      margin-bottom: 1rem;
+      a{
+        color: inherit!important;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+}

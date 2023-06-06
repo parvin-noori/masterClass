@@ -113,10 +113,11 @@ input:focus {
     align-items: center;
     color: white;
     text-align: center; }
-    .trendingSlide .trendingSlideContent .separator {
-      width: 1rem;
-      height: 4px;
-      background: white; }
+
+.separator {
+  width: 1rem;
+  height: 4px;
+  background: white; }
 
 .swiper-button-prev, .swiper-button-next {
   color: white;
@@ -312,5 +313,53 @@ input:focus {
 
   .footer-social li i {
     font-size: 1.6rem; } }
+.hero-section {
+  position: relative;
+  height: 85vh; }
+  .hero-section:after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(to top, black 0, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0) 45%) center no-repeat;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1; }
+  .hero-section img {
+    object-fit: cover; }
+  .hero-section .hero-section-content {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    align-items: center;
+    color: white;
+    z-index: 10; }
+    .hero-section .hero-section-content .button--link {
+      color: inherit !important;
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 1.5rem; }
+      .hero-section .hero-section-content .button--link i {
+        font-size: 1.3rem; }
+      .hero-section .hero-section-content .button--link:hover {
+        opacity: .8; }
+    .hero-section .hero-section-content .signUpBtn {
+      padding: 0.8rem 2rem;
+      color: white !important;
+      border-radius: 10px;
+      text-transform: capitalize;
+      background-color: var(--secondary);
+      font-weight: bold;
+      text-transform: capitalize; }
+      .hero-section .hero-section-content .signUpBtn:hover {
+        filter: contrast(0.9); }
+
+@media (min-width: 1400px) {
+  .hero-section-content {
+    bottom: 10%; } }
+@media (max-width: 1400px) {
+  .hero-section-content {
+    bottom: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,8 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <title>single</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--        <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/IranSans.css">
+    <link rel="stylesheet" href="assets/css/figtree.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!--        <link rel="stylesheet" href="rtl.css">-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 <body>
+<!--header-->
+<header class="header py-lg-3 py-2 position-sticky top-0 bg-white">
+    <div class="container">
+        <div class="row align-items-center justify-content-lg-between">
+            <div class="col-auto me-lg-0 me-auto">
+                <div class="logo">
+                    <a href="#"> <img src="assets/imgs/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <ul class="nav d-flex align-items-center">
+                    <li class="me-lg-3 me-2">
+                        <button type="button"
+                                class="btn d-lg-flex  d-none align-items-center dropdown-toggle categoryBtn p-0"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            all categories
+                            <i class="fa-light fa-chevron-down ms-2"></i>
+                        </button>
+                        <button type="button"
+                                class="btn d-lg-none  d-flex align-items-center dropdown-toggle categoryBtn p-0"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategory"
+                                aria-controls="offcanvasCategory">
+                            all categories
+                            <i class="fa-light fa-chevron-down ms-2"></i>
+                        </button>
+                        <div class="dropdown-menu category-dropdown py-0">
+                            <div class="d-flex flex-column dropdown-body">
+                                <ul class="dropdown-list nav flex-column">
+                                    <li><a class="dropdown-item" href="#">food</a></li>
+                                    <li><a class="dropdown-item" href="#">design & style</a></li>
+                                    <li><a class="dropdown-item" href="#">arts & entertainment</a></li>
+                                    <li><a class="dropdown-item" href="#">music</a></li>
+                                    <li><a class="dropdown-item" href="#">business</a></li>
+                                    <li><a class="dropdown-item" href="#">sports and gaming</a></li>
+                                    <li><a class="dropdown-item" href="#">writing</a></li>
+                                    <li><a class="dropdown-item" href="#">science & tech</a></li>
+                                    <li><a class="dropdown-item" href="#">home & lifestyle</a></li>
+                                    <li><a class="dropdown-item" href="#">community & government</a></li>
+                                    <li><a class="dropdown-item" href="#">wellness</a></li>
+                                </ul>
 
+
+                            </div>
+                            <div class="dropdown-footer p-2">
+                                <button class="btn d-flex w-100 align-items-center justify-content-center">
+                                    discovered
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="me-3 d-lg-flex d-none">
+                        <button class="btn dropdown-toggle d-flex align-items-center" type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                            <i class="fa-light fa-magnifying-glass me-2"></i>
+                            search
+                        </button>
+                        <div class="dropdown-menu py-0 search-dropdown">
+                            <div class="dropdown-header p-2">
+                                <div class="input-group border rounded-2 overflow-hidden">
+                                    <button class="btn d-flex align-items-center justify-content-center" type="button"
+                                            id="searchButton"><i class="fa-light fa-magnifying-glass me-2"></i></button>
+                                    <input type="text" class="form-control border-0 ps-0 "
+                                           placeholder="Search Instructors, Classes, Topics and more"
+                                           aria-describedby="searchButton">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column dropdown-body">
+                                <ul class="dropdown-list nav flex-column">
+                                    <li><a class="dropdown-item" href="#">arts & entertainment</a></li>
+                                    <li><a class="dropdown-item" href="#">music</a></li>
+                                    <li><a class="dropdown-item" href="#">business</a></li>
+                                    <li><a class="dropdown-item" href="#">sports and gaming</a></li>
+                                    <li><a class="dropdown-item" href="#">writing</a></li>
+                                    <li><a class="dropdown-item" href="#">science & tech</a></li>
+                                    <li><a class="dropdown-item" href="#">home & lifestyle</a></li>
+                                    <li><a class="dropdown-item" href="#">community & government</a></li>
+                                    <li><a class="dropdown-item" href="#">wellness</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="d-lg-flex d-none">view plan</a></li>
+                    <li class="d-lg-none d-flex">
+                        <button type="button" class="btn " data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasResponsiveMenu" role="button"
+                                aria-controls="offcanvasResponsiveMenu">
+                            <i class="fa-regular fa-bars"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-auto d-lg-flex d-none">
+                <ul class="nav">
+                    <li class="me-3"><a href="#">at work</a></li>
+                    <li><a href="#">log in</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--hero section-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 px-0">
+            <div class="hero-section text-center">
+                <img src="assets/imgs/n2oga4wzphlxisph0iwx8p0p5q1j.jpeg" alt="" class="w-100 h-100">
+                <div class="hero-section-content flex-column d-flex w-100">
+                    <div class="col-5 col-sm-4 col-lg-3 col-xl-3  d-flex align-items-center flex-column">
+                        <img src="assets/imgs/2jpc1jcu2zgs3qraifzh8wtevyei (1).png"
+                             alt="" class="w-50">
+                        <div class="separator mb-2"></div>
+                        <p class="fw-bold">Teaches Strategic Decision-Making</p>
+                    </div>
+                    <div class="col-11 col-xxl-4 col-xl-5 col-lg-6 col-md-8">Dive into the pivotal decisions that shaped Mellody’s career
+                        and learn how to apply strategic decision-making to your own future in leadership.
+                    </div>
+                    <div class="col-auto d-flex">
+                        <button type="button" class="btn d-flex flex-column align-items-center button--link">
+                            <i class="fa-solid fa-play mb-2"></i>
+                            trailer
+                        </button>
+                        <button type="button" class="btn d-flex flex-column align-items-center button--link">
+                            <i class="fa-light fa-copy mb-2"></i>
+                            sample
+                        </button>
+                        <button type="button" class="btn d-flex flex-column align-items-center button--link">
+                            <i class="fa-sharp fa-regular fa-arrow-up-from-bracket mb-2"></i>
+                            share
+                        </button>
+                    </div>
+                    <div class="col-xl-3 col-xxl-2 col-md-4 col-xl-2 col-11">
+                        <div class="btn signUpBtn w-100 mb-2">sign up</div>
+                        <small>Starting at €10/month (billed annually) for all classes and sessions</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

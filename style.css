@@ -267,12 +267,17 @@ input:focus {
   .business-banner-bg {
     height: 100%;
     margin-top: 3rem; } }
+.accordion-title {
+  font-size: 1.2rem;
+  text-transform: capitalize; }
+
 #faqAccordion .accordion-item {
   margin-bottom: 1rem;
   border: none;
   background-color: var(--primary);
   color: white;
-  border-radius: 0.5rem; }
+  border-radius: 0.5rem;
+  cursor: pointer; }
   #faqAccordion .accordion-item:hover {
     opacity: 0.9; }
   #faqAccordion .accordion-item .accordion-button {

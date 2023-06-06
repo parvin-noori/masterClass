@@ -267,5 +267,27 @@ input:focus {
   .business-banner-bg {
     height: 100%;
     margin-top: 3rem; } }
+#faqAccordion .accordion-item {
+  margin-bottom: 1rem;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0.5rem; }
+  #faqAccordion .accordion-item:hover {
+    opacity: 0.9; }
+  #faqAccordion .accordion-item .accordion-button {
+    background: transparent;
+    color: inherit;
+    box-shadow: none;
+    padding: 1.2rem; }
+    #faqAccordion .accordion-item .accordion-button:focus {
+      box-shadow: none; }
+    #faqAccordion .accordion-item .accordion-button:after {
+      content: '\f078';
+      font-family: "Font Awesome 6 Pro";
+      background: none; }
+    #faqAccordion .accordion-item .accordion-button:not(.collapsed)::after {
+      content: '\f077';
+      font-family: "Font Awesome 6 Pro"; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 @import "assets/scss/colors";
 
+
 :root {
   --primary: #{$primary};
   --secondary: #{$secondary};
@@ -168,7 +169,7 @@ input:focus {
   }
 }
 
-.trendingSwiper, .cookSwiper,.reviewsSwiper {
+.trendingSwiper, .cookSwiper, .reviewsSwiper {
   padding-bottom: 2.5rem;
 }
 
@@ -517,5 +518,42 @@ input:focus {
   .business-banner-bg {
     height: 100%;
     margin-top: 3rem;
+  }
+}
+
+#faqAccordion {
+  .accordion-item {
+    margin-bottom: 1rem;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 0.5rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    .accordion-button {
+      background: transparent;
+      color: inherit;
+      box-shadow: none;
+      padding: 1.2rem;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:after {
+        content: '\f078';
+        font-family: "Font Awesome 6 Pro";
+        background: none;
+      }
+
+      &:not(.collapsed)::after {
+        content: '\f077';
+      font-family: "Font Awesome 6 Pro";
+
+      }
+    }
   }
 }

@@ -295,18 +295,16 @@ input:focus {
       content: '\f077';
       font-family: "Font Awesome 6 Pro"; }
 
-.footer {
-  padding: 5rem 0; }
-  .footer .footer-title {
-    font-size: inherit;
-    text-transform: capitalize;
-    font-weight: bold; }
-  .footer ul li {
-    margin-bottom: 1rem; }
-    .footer ul li a {
-      color: inherit !important; }
-      .footer ul li a:hover {
-        text-decoration: underline; }
+.footer .footer-title {
+  font-size: inherit;
+  text-transform: capitalize;
+  font-weight: bold; }
+.footer ul li {
+  margin-bottom: 1rem; }
+  .footer ul li a {
+    color: inherit !important; }
+    .footer ul li a:hover {
+      text-decoration: underline; }
 
 @media (max-width: 768px) {
   .footer-download li {

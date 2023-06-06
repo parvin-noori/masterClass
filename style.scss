@@ -569,6 +569,7 @@ input:focus {
     text-transform: capitalize;
     font-weight: bold;
   }
+
   ul{
     li{
       margin-bottom: 1rem;
@@ -577,6 +578,20 @@ input:focus {
         &:hover{
           text-decoration:underline;
         }
+      }
+    }
+  }
+}
+@media(max-width: 768px) {
+  .footer-download{
+    li{
+      margin-bottom: 0!important;
+    }
+  }
+  .footer-social{
+    li{
+      i{
+        font-size: 1.6rem;
       }
     }
   }

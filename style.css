@@ -308,4 +308,11 @@ input:focus {
       .footer ul li a:hover {
         text-decoration: underline; }
 
+@media (max-width: 768px) {
+  .footer-download li {
+    margin-bottom: 0 !important; }
+
+  .footer-social li i {
+    font-size: 1.6rem; } }
+
 /*# sourceMappingURL=style.css.map */

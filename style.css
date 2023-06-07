@@ -396,7 +396,7 @@ video {
   justify-content: center; }
   #shareModal ul a.shareFacebook {
     background-color: #3c5a99; }
-  #shareModal ul a.shareEnvelope {
+  #shareModal ul a.shareEnvelope, #shareModal ul a.responsiveCopyLink {
     background-color: #222326; }
   #shareModal ul a.shareTwitter {
     background-color: #2ba2ef; }
@@ -404,6 +404,8 @@ video {
     background-color: #0e76a8; }
   #shareModal ul a.shareTelegram {
     background-color: #0078ff; }
+  #shareModal ul a.messageLink {
+    background-color: #01db26; }
   #shareModal ul a:hover {
     opacity: 0.9; }
 #shareModal .pageLink {
@@ -411,6 +413,15 @@ video {
   cursor: not-allowed; }
 
 .modal-backdrop {
-  opacity: 0.9 !important; }
+  opacity: .9 !important; }
+
+@media (max-width: 768px) {
+  #shareModal ul {
+    display: flex;
+    gap: 1rem; }
+    #shareModal ul li {
+      flex-grow: 1; }
+      #shareModal ul li a {
+        width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -126,7 +126,7 @@ $(document).ready(function () {
     });
 
     //copy link
-    const currentUrl = window.location.href;
+    let currentUrl = window.location.href;
     $('#copyLinkInput').val(currentUrl);
 
 
@@ -151,4 +151,9 @@ $('#copyLinkBtn').click(function (e) {
     }, 2000);
     
 })
+
+    //responsive copy link
+    $('.responsiveCopyLink').click(function () {
+        navigator.clipboard.writeText(currentUrl);
+    })
 })

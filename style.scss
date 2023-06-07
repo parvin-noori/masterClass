@@ -705,13 +705,16 @@ input:focus {
 
 #trailerModal {
   color: white;
+
   .signUpBtn {
     @include button;
     background-color: var(--secondary);
   }
-  h1{
+
+  h1 {
     font-size: inherit;
   }
+
   .teacher-profile {
     width: 5rem;
     height: 5rem;
@@ -728,12 +731,14 @@ input:focus {
     }
   }
 }
-video{
+
+video {
   width: 100%;
 }
-#shareModal{
-  ul{
-    a{
+
+#shareModal {
+  ul {
+    a {
       color: white;
       width: 4.2rem;
       height: 3.2rem;
@@ -742,31 +747,58 @@ video{
       align-items: center;
       font-size: x-large;
       justify-content: center;
-      &.shareFacebook{
+
+      &.shareFacebook {
         background-color: #3c5a99;
       }
-      &.shareEnvelope{
+
+      &.shareEnvelope, &.responsiveCopyLink {
         background-color: #222326;
       }
-      &.shareTwitter{
+
+      &.shareTwitter {
         background-color: #2ba2ef;
       }
-      &.shareLinkedin{
+
+      &.shareLinkedin {
         background-color: #0e76a8;
       }
-      &.shareTelegram{
+
+      &.shareTelegram {
         background-color: #0078ff;
       }
-      &:hover{
+
+      &.messageLink {
+        background-color: #01db26;
+      }
+
+      &:hover {
         opacity: 0.9;
       }
     }
   }
-  .pageLink{
+
+  .pageLink {
     pointer-events: none;
     cursor: not-allowed;
   }
 }
-.modal-backdrop{
-  opacity: .9!important;
+
+.modal-backdrop {
+  opacity: .9 !important;
+}
+
+@media (max-width: 768px) {
+  #shareModal {
+    ul {
+      display: flex;
+      gap: 1rem;
+      li{
+       flex-grow: 1;
+        a{
+          width: 100%;
+        }
+      }
+    }
+  }
 }

@@ -731,3 +731,39 @@ input:focus {
 video{
   width: 100%;
 }
+#shareModal{
+  ul{
+    a{
+      color: white;
+      width: 4.5rem;
+      height: 3.5rem;
+      display: flex;
+      border-radius: 0.5rem;
+      align-items: center;
+      font-size: x-large;
+      justify-content: center;
+      &.shareFacebook{
+        background-color: #3c5a99;
+      }
+      &.shareEnvelope{
+        background-color: #222326;
+      }
+      &.shareTwitter{
+        background-color: #2ba2ef;
+      }
+      &.shareLinkedin{
+        background-color: #0e76a8;
+      }
+      &.shareTelegram{
+        background-color: #0078ff;
+      }
+      &:hover{
+        opacity: 0.9;
+      }
+    }
+  }
+  .pageLink{
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}

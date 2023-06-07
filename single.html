@@ -145,7 +145,7 @@
                             <i class="fa-light fa-copy mb-2"></i>
                             sample
                         </button>
-                        <button type="button" class="btn d-flex flex-column align-items-center button--link">
+                        <button type="button" class="btn d-flex flex-column align-items-center button--link" data-bs-toggle="modal" data-bs-target="#shareModal">
                             <i class="fa-sharp fa-regular fa-arrow-up-from-bracket mb-2"></i>
                             share
                         </button>
@@ -162,7 +162,7 @@
 </body>
 </html>
 
-<!-- Modal -->
+<!-- trailer Modal -->
 <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered  modal-xl">
         <div class="modal-content bg-transparent border-0">
@@ -184,6 +184,34 @@
                     <source src="assets/imgs/birds.mp4" type="video/ogg">
                     Your browser does not support the video tag.
                 </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- share Modal -->
+<div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body justify-content-center d-flex">
+              <div class="col-10 d-flex flex-column align-items-center text-center">
+                  <span class="fw-bold fs-3 mb-4">Share this class with your friends</span>
+                  <ul class="nav d-flex align-items-center justify-content-between w-100 mb-4">
+                      <li><a href="#" class="shareFacebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                      <li><a href="#" class="shareTelegram"><i class="fa-solid fa-paper-plane"></i></a></li>
+                      <li><a href="#" class="shareLinkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                      <li><a href="#" class="shareTwitter"><i class="fa-brands fa-twitter"></i></a></li>
+                      <li><a href="#" class="shareEnvelope"><i class="fa-solid fa-envelope"></i></a></li>
+                  </ul>
+                  <div class="input-group border rounded-1 bg-light">
+                      <input type="text" class="form-control border-0 bg-transparent pageLink" placeholder="" aria-label="" aria-describedby="copyLinkBtn">
+                      <button class="btn p-2 fw-bold" type="button" id="copyLinkBtn">copy</button>
+                  </div>
+              </div>
             </div>
         </div>
     </div>

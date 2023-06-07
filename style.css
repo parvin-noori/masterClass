@@ -385,4 +385,29 @@ input:focus {
 video {
   width: 100%; }
 
+#shareModal ul a {
+  color: white;
+  width: 4.5rem;
+  height: 3.5rem;
+  display: flex;
+  border-radius: 0.5rem;
+  align-items: center;
+  font-size: x-large;
+  justify-content: center; }
+  #shareModal ul a.shareFacebook {
+    background-color: #3c5a99; }
+  #shareModal ul a.shareEnvelope {
+    background-color: #222326; }
+  #shareModal ul a.shareTwitter {
+    background-color: #2ba2ef; }
+  #shareModal ul a.shareLinkedin {
+    background-color: #0e76a8; }
+  #shareModal ul a.shareTelegram {
+    background-color: #0078ff; }
+  #shareModal ul a:hover {
+    opacity: 0.9; }
+#shareModal .pageLink {
+  pointer-events: none;
+  cursor: not-allowed; }
+
 /*# sourceMappingURL=style.css.map */

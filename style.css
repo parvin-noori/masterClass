@@ -410,4 +410,7 @@ video {
   pointer-events: none;
   cursor: not-allowed; }
 
+.modal-backdrop {
+  opacity: 0.9 !important; }
+
 /*# sourceMappingURL=style.css.map */

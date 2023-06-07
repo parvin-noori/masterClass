@@ -273,7 +273,7 @@ input:focus {
   text-transform: capitalize; }
 
 #faqAccordion .accordion-item {
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
   border: none;
   background-color: var(--primary);
   color: white;
@@ -284,8 +284,11 @@ input:focus {
   #faqAccordion .accordion-item .accordion-button {
     background: transparent;
     color: inherit;
+    text-overflow: ellipsis;
+    overflow: hidden;
     box-shadow: none;
-    padding: 1.2rem; }
+    padding: 1.2rem;
+    white-space: nowrap; }
     #faqAccordion .accordion-item .accordion-button:focus {
       box-shadow: none; }
     #faqAccordion .accordion-item .accordion-button:after {
@@ -423,5 +426,34 @@ video {
       flex-grow: 1; }
       #shareModal ul li a {
         width: 100%; } }
+.courses-tab #navbar-courses-tab ul {
+  border-width: 2px !important;
+  margin: 0 !important; }
+  .courses-tab #navbar-courses-tab ul a.nav-link {
+    border-radius: 0;
+    padding: 1rem 3rem;
+    color: #6c757d !important; }
+    .courses-tab #navbar-courses-tab ul a.nav-link.active {
+      position: relative;
+      background-color: transparent;
+      color: var(--primary) !important; }
+      .courses-tab #navbar-courses-tab ul a.nav-link.active:after {
+        content: '';
+        border-bottom: 2px solid var(--primary);
+        width: 100%;
+        position: absolute;
+        bottom: -2px;
+        left: 0; }
+
+.video-button-item {
+  background-color: var(--primary) !important;
+  color: white !important;
+  padding: 1rem;
+  margin-bottom: 5px; }
+  .video-button-item i {
+    color: var(--secondary);
+    font-size: x-large; }
+  .video-button-item:hover {
+    opacity: .9; }
 
 /*# sourceMappingURL=style.css.map */

@@ -533,7 +533,7 @@ input:focus {
 #faqAccordion {
 
   .accordion-item {
-    margin-bottom: 1rem;
+    margin-bottom: 5px;
     border: none;
     background-color: var(--primary);
     color: white;
@@ -547,8 +547,11 @@ input:focus {
     .accordion-button {
       background: transparent;
       color: inherit;
+      text-overflow: ellipsis;
+      overflow: hidden;
       box-shadow: none;
       padding: 1.2rem;
+      white-space: nowrap;
 
       &:focus {
         box-shadow: none;
@@ -793,12 +796,57 @@ video {
     ul {
       display: flex;
       gap: 1rem;
-      li{
-       flex-grow: 1;
-        a{
+
+      li {
+        flex-grow: 1;
+
+        a {
           width: 100%;
         }
       }
     }
+  }
+}
+
+.courses-tab {
+  #navbar-courses-tab {
+    ul {
+      border-width: 2px !important;
+      margin: 0 !important;
+
+      a.nav-link {
+        border-radius: 0;
+        padding: 1rem 3rem;
+        color: #6c757d !important;
+
+        &.active {
+          position: relative;
+          background-color: transparent;
+          color: var(--primary) !important;
+
+          &:after {
+            content: '';
+            border-bottom: 2px solid var(--primary);
+            width: 100%;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.video-button-item{
+  background-color: var(--primary) !important;
+  color: white!important;
+  padding: 1rem;
+  margin-bottom: 5px;
+  i{
+    color: var(--secondary);
+    font-size: x-large;
+  }
+  &:hover{
+    opacity: .9;
   }
 }

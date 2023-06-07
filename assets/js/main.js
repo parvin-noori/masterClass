@@ -125,4 +125,30 @@ $(document).ready(function () {
         },
     });
 
+    //copy link
+    const currentUrl = window.location.href;
+    $('#copyLinkInput').val(currentUrl);
+
+
+    // copyLinkBtn
+$('#copyLinkBtn').click(function (e) {
+    // Get the text field
+    var copyText = document.getElementById("copyLinkInput");
+
+    // // Select the text field
+    // copyText.select();
+    // copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Provide visual feedback to the user (optional)
+    $(this).text('Copied!');
+
+    // Reset the button text after a brief delay (optional)
+    setTimeout(function() {
+        $('#copyLinkBtn').text('Copy');
+    }, 2000);
+    
+})
 })

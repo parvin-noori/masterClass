@@ -161,6 +161,10 @@ $(document).ready(function () {
     let video = videojs("my-video");
     const myModalEl = document.getElementById('trailerModal')
     myModalEl.addEventListener('shown.bs.modal', event => {
+
+
+            // video.controlBar.addChild('QualitySelector');
+
         video.ready( function() {
             this.play();
             video.vhs = null;

@@ -16,6 +16,8 @@
     <script src="assets/js/jquery-3.6.3.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/video-js.css">
+    <script src="assets/js/video.min.js"></script>
 </head>
 <body>
 <!--header-->
@@ -298,8 +300,8 @@
 <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered  modal-xl">
         <div class="modal-content bg-transparent border-0">
-            <div class="modal-header border-0 flex-md-row flex-column align-items-md-center align-items-start">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header border-0 flex-md-row flex-column align-items-md-center align-items-start j">
+<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
                 <div class="d-flex  align-items-center justify-content-between mb-md-0 mb-3">
                     <div class="teacher-profile me-2 d-md-inline-block d-none"><img
                             src="assets/imgs/y0753c2ikgdtnacnppvu0kk3vm0l.jpeg"></div>
@@ -311,10 +313,25 @@
                 <div class="signUpBtn">sign up</div>
             </div>
             <div class="modal-body">
-                <video controls>
+                <video
+                        id="my-video"
+                        class="video-js w-100"
+                        controls
+                        preload="auto"
+                        poster="assets/imgs/image.jpg"
+                        data-setup="{}"
+
+                >
                     <source src="assets/imgs/birds.mp4" type="video/mp4">
                     <source src="assets/imgs/birds.mp4" type="video/ogg">
                     Your browser does not support the video tag.
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a href="https://videojs.com/html5-video-support/" target="_blank"
+                        >supports HTML5 video</a
+                        >
+                    </p>
                 </video>
             </div>
         </div>

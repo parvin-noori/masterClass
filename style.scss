@@ -850,3 +850,10 @@ video {
     opacity: .9;
   }
 }
+
+.video-js .vjs-play-progress{
+  background-color: var(--secondary) !important;
+  &::before{
+    display: none!important;
+  }
+}

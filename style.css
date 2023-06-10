@@ -456,4 +456,9 @@ video {
   .video-button-item:hover {
     opacity: .9; }
 
+.video-js .vjs-play-progress {
+  background-color: var(--secondary) !important; }
+  .video-js .vjs-play-progress::before {
+    display: none !important; }
+
 /*# sourceMappingURL=style.css.map */

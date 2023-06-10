@@ -131,29 +131,55 @@ $(document).ready(function () {
 
 
     // copyLinkBtn
-$('#copyLinkBtn').click(function (e) {
-    // Get the text field
-    var copyText = document.getElementById("copyLinkInput");
+    $('#copyLinkBtn').click(function (e) {
+        // Get the text field
+        var copyText = document.getElementById("copyLinkInput");
 
-    // // Select the text field
-    // copyText.select();
-    // copyText.setSelectionRange(0, 99999); // For mobile devices
+        // // Select the text field
+        // copyText.select();
+        // copyText.setSelectionRange(0, 99999); // For mobile devices
 
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.value);
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
 
-    // Provide visual feedback to the user (optional)
-    $(this).text('Copied!');
+        // Provide visual feedback to the user (optional)
+        $(this).text('Copied!');
 
-    // Reset the button text after a brief delay (optional)
-    setTimeout(function() {
-        $('#copyLinkBtn').text('Copy');
-    }, 2000);
-    
-})
+        // Reset the button text after a brief delay (optional)
+        setTimeout(function () {
+            $('#copyLinkBtn').text('Copy');
+        }, 2000);
+
+    })
 
     //responsive copy link
     $('.responsiveCopyLink').click(function () {
         navigator.clipboard.writeText(currentUrl);
     })
+
+    //video js
+    let video = videojs("my-video");
+    const myModalEl = document.getElementById('trailerModal')
+    myModalEl.addEventListener('shown.bs.modal', event => {
+        video.ready( function() {
+            this.play()
+        });
+        video.on('timeupdate',function () {
+            console.log(this.currentTime())
+        })
+        //  videojs("my-video", {}, () => {
+        //     // playbackRates: [0.5, 1, 1.5, 2]
+        //     console.log("Inicio");
+        //      ratechange
+        // })
+    })
+
+    // let video = videojs("my-video");
+    // if(video){
+
+    // }
+    // videojs('my-video', {
+    //     playbackRates: [0.5, 1, 1.5, 2]
+    // });
+
 })

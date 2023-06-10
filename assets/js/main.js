@@ -162,7 +162,8 @@ $(document).ready(function () {
     const myModalEl = document.getElementById('trailerModal')
     myModalEl.addEventListener('shown.bs.modal', event => {
         video.ready( function() {
-            this.play()
+            this.play();
+            video.vhs = null;
         });
         video.on('timeupdate',function () {
             console.log(this.currentTime())

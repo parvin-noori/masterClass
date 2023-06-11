@@ -174,7 +174,7 @@ input:focus {
 .trendingSwiper, .cookSwiper, .reviewsSwiper {
   padding-bottom: 2.5rem;
 }
-#my-video,.trendingSlide{
+.video-wrapper,.trendingSlide{
   overflow: hidden;
   &:after {
     content: '';
@@ -737,23 +737,7 @@ input:focus {
     }
   }
 
-  .modal-body {
-    padding-bottom: 50%;
-  }
-}
 
-.modal {
-  .video-js {
-    position: absolute;
-    height: 100% !important;
-    right: 0;
-    left: 0;
-    width: 100%;
-
-    .vjs-control-bar {
-      background-color: transparent !important;
-    }
-  }
 }
 
 video {
@@ -809,7 +793,7 @@ video {
 }
 
 .modal-backdrop {
-  opacity: .9 !important;
+  opacity: .96 !important;
 }
 
 @media (max-width: 768px) {
@@ -893,7 +877,7 @@ video {
 
 .vjs-control-bar {
   font-size: 0.8rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .vjs-progress-control.vjs-control {
@@ -904,11 +888,13 @@ video {
   left: 0;
   width: 100% !important;
 
+
   .vjs-progress-holder.vjs-slider {
     height: 1rem!important;
     margin: 0 !important;
   }
 }
+
 .vjs-playback-rate.vjs-menu-button{
   margin-left: auto!important;
 }
@@ -924,13 +910,48 @@ video {
   background-color: rgba(0,0,0,0.8);
   transition: all 0.3s;
   display: none;
+  z-index: 1;
 }
-#trailerModal{
+.video-wrapper{
+  position: relative;
+  padding-bottom: 50%;
+  height: 0;
+  .video-js {
+    position: absolute;
+    height: 100% !important;
+    right: 0;
+    left: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+
+    .vjs-control-bar {
+      background-color: transparent !important;
+    }
+  }
   .overlay{
     .btn{
       @include  button();
       background-color: var(--secondary);
       font-weight: bold;
     }
+  }
+  .vjs-big-play-button{
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    border: none!important;
+    width: 4rem!important;
+    height: 4rem!important;
+    border-radius: 50%!important;
+    padding: 0!important;
+    line-height: 2!important;
+    background-color: rgba(0,0,0,0.4) !important;
+  }
+}
+.vjs-poster{
+  img{
+    width: 100%;
   }
 }

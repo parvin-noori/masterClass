@@ -193,11 +193,36 @@
                     <h4 id="classInfo" class="fw-bold fs-2 text-capitalize">about this classes</h4>
                     <div class="row">
                         <div class="col-8">
-                            <video controls class="mb-2">
-                                <source src="assets/imgs/birds.mp4" type="video/mp4">
-                                <source src="assets/imgs/birds.mp4" type="video/ogg">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="video-wrapper mb-3">
+                                <video
+                                        id="video2"
+                                        class="video-js w-100 vjs-default-skin"
+                                        poster="assets/imgs/r70523o9waplt5j87lp9qjfiu111.webp"
+                                        data-setup='{ "playbackRates": [0.5, 1, 1.5, 2],"controls":true, "preload": "auto" }'
+
+                                >
+                                    <source src="assets/imgs/f4009d03-fc56-4ad0-a0fb-e49f51f6a549.mp4" type="video/mp4">
+
+
+                                    <track label="English" kind="subtitles" srclang="en"
+                                           src="" default/>
+                                    Your browser does not support the video tag.
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank"
+                                        >supports HTML5 video</a
+                                        >
+                                    </p>
+                                </video>
+                                <div class="overlay align-items-center justify-content-center">
+                                    <div class="d-flex flex-column align-items-center text-white">
+                                        <h5>Subscribe to MasterClass to continue watching</h5>
+                                        <p>Starting at €10/month (billed annually)</p>
+                                        <button class="btn">sing up</button>
+                                    </div>
+                                </div>
+                            </div>
                             <p class="text-muted">Mellody Hobson knows how to make tough calls in trying times. As one
                                 of the most
                                 influential leaders in business today, she’s led companies through junctions of
@@ -316,32 +341,34 @@
                 <div class="signUpBtn">sign up</div>
             </div>
             <div class="modal-body">
-                <video
-                        id="my-video"
-                        class="video-js w-100 vjs-default-skin"
-                        poster="assets/imgs/image.jpg"
-                        data-setup='{ "playbackRates": [0.5, 1, 1.5, 2],"controls":true, "preload": "auto" }'
+                <div class="video-wrapper">
+                    <video
+                            id="my-video"
+                            class="video-js w-100 vjs-default-skin"
+                            poster="assets/imgs/image.jpg"
+                            data-setup='{ "playbackRates": [0.5, 1, 1.5, 2],"controls":true, "preload": "auto" }'
 
-                >
-                    <source src="assets/imgs/f4009d03-fc56-4ad0-a0fb-e49f51f6a549.mp4" type="video/mp4">
+                    >
+                        <source src="assets/imgs/f4009d03-fc56-4ad0-a0fb-e49f51f6a549.mp4" type="video/mp4">
 
 
-                    <track label="English" kind="subtitles" srclang="en"
-                           src="" default/>
-                    Your browser does not support the video tag.
-                    <p class="vjs-no-js">
-                        To view this video please enable JavaScript, and consider upgrading to a
-                        web browser that
-                        <a href="https://videojs.com/html5-video-support/" target="_blank"
-                        >supports HTML5 video</a
-                        >
-                    </p>
-                </video>
-                <div class="overlay align-items-center justify-content-center">
-                    <div class="d-flex flex-column align-items-center">
-                        <h5>Subscribe to MasterClass to continue watching</h5>
-                        <p>Starting at €10/month (billed annually)</p>
-                        <button class="btn">sing up</button>
+                        <track label="English" kind="subtitles" srclang="en"
+                               src="" default/>
+                        Your browser does not support the video tag.
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank"
+                            >supports HTML5 video</a
+                            >
+                        </p>
+                    </video>
+                    <div class="overlay align-items-center justify-content-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <h5>Subscribe to MasterClass to continue watching</h5>
+                            <p>Starting at €10/month (billed annually)</p>
+                            <button class="btn">sing up</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -157,13 +157,14 @@ $(document).ready(function () {
         navigator.clipboard.writeText(currentUrl);
     })
 
-    //video js
+    //video js(trailer modal)
     let video = videojs("my-video");
     const myModalEl = document.getElementById('trailerModal');
-    let overlay = $('#trailerModal .overlay')
+    let overlay;
     myModalEl.addEventListener('shown.bs.modal', event => {
+        overlay = $(this).find('.overlay');
         video.ready(function () {
-            this.play();
+            // this.play();
             video.vhs = null;
 
         });
@@ -175,8 +176,24 @@ $(document).ready(function () {
             overlay.addClass('d-flex');
             overlay.removeClass('d-none')
         })
-
+        //
     })
 
 
+    //video js(about this class)
+    let video2 = videojs("video2");
+
+    video2.ready(function () {
+        overlay=$('#'+$(this).attr('id')).closest('.video-wrapper').find('.overlay')
+        video2.vhs = null;
+
+    });
+    video2.on("play", function () {
+        overlay.addClass('d-none');
+        overlay.removeClass('d-flex')
+    });
+    video2.on("pause", function () {
+        overlay.addClass('d-flex');
+        overlay.removeClass('d-none')
+    })
 })

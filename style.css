@@ -476,6 +476,20 @@ video {
   display: none !important; }
 
 .vjs-control-bar {
-  font-size: 1rem; }
+  font-size: 0.8rem; }
+
+.vjs-progress-control.vjs-control {
+  top: -1.5rem;
+  position: absolute !important;
+  right: 0;
+  height: .3em;
+  left: 0;
+  width: 100% !important; }
+  .vjs-progress-control.vjs-control .vjs-progress-holder.vjs-slider {
+    height: 1rem !important;
+    margin: 0 !important; }
+
+.vjs-playback-rate.vjs-menu-button {
+  margin-left: auto !important; }
 
 /*# sourceMappingURL=style.css.map */

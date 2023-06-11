@@ -159,13 +159,22 @@ $(document).ready(function () {
 
     //video js
     let video = videojs("my-video");
-    const myModalEl = document.getElementById('trailerModal')
+    const myModalEl = document.getElementById('trailerModal');
+    let overlay = $('#trailerModal .overlay')
     myModalEl.addEventListener('shown.bs.modal', event => {
         video.ready(function () {
             this.play();
             video.vhs = null;
 
         });
+        video.on("play", function () {
+            overlay.addClass('d-none');
+            overlay.removeClass('d-flex')
+        });
+        video.on("pause", function () {
+            overlay.addClass('d-flex');
+            overlay.removeClass('d-none')
+        })
 
     })
 

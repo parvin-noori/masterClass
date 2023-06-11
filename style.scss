@@ -921,7 +921,16 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.8);
   transition: all 0.3s;
   display: none;
+}
+#trailerModal{
+  .overlay{
+    .btn{
+      @include  button();
+      background-color: var(--secondary);
+      font-weight: bold;
+    }
+  }
 }

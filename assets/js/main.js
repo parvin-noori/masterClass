@@ -161,31 +161,13 @@ $(document).ready(function () {
     let video = videojs("my-video");
     const myModalEl = document.getElementById('trailerModal')
     myModalEl.addEventListener('shown.bs.modal', event => {
-        video.ready( function() {
+        video.ready(function () {
             this.play();
             video.vhs = null;
-            // video.qualityMenu({
-            //     "useResolutionLabels": true,
-            //     availableQualities: ['auto', '240p', '360p', '480p', '720p', '1080p'],
-            //     defaultResolution: '720p'
-            // });
+
         });
-        video.on('timeupdate',function () {
-            console.log(this.currentTime())
-        })
-        //  videojs("my-video", {}, () => {
-        //     // playbackRates: [0.5, 1, 1.5, 2]
-        //     console.log("Inicio");
-        //      ratechange
-        // })
+
     })
 
-    // let video = videojs("my-video");
-    // if(video){
-
-    // }
-    // videojs('my-video', {
-    //     playbackRates: [0.5, 1, 1.5, 2]
-    // });
 
 })

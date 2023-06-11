@@ -174,12 +174,8 @@ input:focus {
 .trendingSwiper, .cookSwiper, .reviewsSwiper {
   padding-bottom: 2.5rem;
 }
-
-.trendingSlide {
-  border-radius: 1rem;
+#my-video,.trendingSlide{
   overflow: hidden;
-  position: relative;
-
   &:after {
     content: '';
     position: absolute;
@@ -189,6 +185,13 @@ input:focus {
     left: 0;
     bottom: 0;
   }
+}
+.trendingSlide {
+  border-radius: 1rem;
+
+  position: relative;
+
+
 
   .trendingSlideContent {
     position: absolute;
@@ -743,6 +746,9 @@ input:focus {
   .video-js {
     position: absolute;
     height: 100% !important;
+    right: 0;
+    left: 0;
+    width: 100%;
 
     .vjs-control-bar {
       background-color: transparent !important;
@@ -887,6 +893,7 @@ video {
 
 .vjs-control-bar {
   font-size: 0.8rem;
+  z-index: 1;
 }
 
 .vjs-progress-control.vjs-control {
@@ -904,4 +911,17 @@ video {
 }
 .vjs-playback-rate.vjs-menu-button{
   margin-left: auto!important;
+}
+.vjs-tech{
+  object-fit: cover;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.9);
+  transition: all 0.3s;
+  display: none;
 }

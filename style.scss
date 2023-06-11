@@ -733,6 +733,19 @@ input:focus {
 
     }
   }
+
+  .modal-body{
+    padding-bottom: 50%;
+  }
+}
+.modal{
+  .video-js{
+    position: absolute;
+    height: 100% !important;
+    .vjs-control-bar{
+      background-color: transparent!important;
+    }
+  }
 }
 
 video {
@@ -856,4 +869,10 @@ video {
   &::before{
     display: none!important;
   }
+}
+.video-js .vjs-time-control {
+  display: block!important;
+}
+.video-js .vjs-remaining-time {
+  display: none!important;
 }

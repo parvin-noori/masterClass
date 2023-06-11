@@ -161,13 +161,14 @@ $(document).ready(function () {
     let video = videojs("my-video");
     const myModalEl = document.getElementById('trailerModal')
     myModalEl.addEventListener('shown.bs.modal', event => {
-
-
-            // video.controlBar.addChild('QualitySelector');
-
         video.ready( function() {
             this.play();
             video.vhs = null;
+            // video.qualityMenu({
+            //     "useResolutionLabels": true,
+            //     availableQualities: ['auto', '240p', '360p', '480p', '720p', '1080p'],
+            //     defaultResolution: '720p'
+            // });
         });
         video.on('timeupdate',function () {
             console.log(this.currentTime())

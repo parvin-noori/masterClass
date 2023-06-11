@@ -384,6 +384,14 @@ input:focus {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+  #trailerModal .modal-body {
+    padding-bottom: 50%; }
+
+.modal .video-js {
+  position: absolute;
+  height: 100% !important; }
+  .modal .video-js .vjs-control-bar {
+    background-color: transparent !important; }
 
 video {
   width: 100%; }
@@ -460,5 +468,11 @@ video {
   background-color: var(--secondary) !important; }
   .video-js .vjs-play-progress::before {
     display: none !important; }
+
+.video-js .vjs-time-control {
+  display: block !important; }
+
+.video-js .vjs-remaining-time {
+  display: none !important; }
 
 /*# sourceMappingURL=style.css.map */

@@ -436,12 +436,21 @@ video {
       flex-grow: 1; }
       #shareModal ul li a {
         width: 100%; } }
+@media (min-width: 768px) {
+  .courses-tab #navbar-courses-tab ul a.nav-link {
+    padding: 1rem 3rem; } }
+@media (max-width: 768px) {
+  .courses-tab #navbar-courses-tab ul a.nav-link {
+    padding: 1rem 2rem; } }
 .courses-tab #navbar-courses-tab ul {
   border-width: 2px !important;
-  margin: 0 !important; }
+  margin: 0 !important;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden; }
   .courses-tab #navbar-courses-tab ul a.nav-link {
     border-radius: 0;
-    padding: 1rem 3rem;
     color: #6c757d !important; }
     .courses-tab #navbar-courses-tab ul a.nav-link.active {
       position: relative;

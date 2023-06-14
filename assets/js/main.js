@@ -206,7 +206,7 @@ $(document).ready(function () {
             prevEl: ".category-classes-swiper-prev",
         },
         breakpoints: {
-            0:{
+            0: {
                 slidesPerView: 1.1,
             },
             574: {

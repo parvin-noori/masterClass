@@ -539,9 +539,16 @@ video {
 .vjs-poster img {
   width: 100%; }
 
-.category-classes-swiper .swiper-button-next, .category-classes-swiper .swiper-rtl .swiper-button-prev {
-  right: 0; }
-.category-classes-swiper .swiper-button-prev, .category-classes-swiper .swiper-rtl .swiper-button-next {
-  left: 0; }
+.category-classes {
+  position: relative; }
+  .category-classes .swiper-button-disabled {
+    opacity: 0; }
+  .category-classes .swiper-button-next, .category-classes .swiper-button-prev {
+    width: 3rem;
+    height: 3rem; }
+  .category-classes .swiper-button-next, .category-classes .swiper-rtl .swiper-button-prev {
+    right: 0; }
+  .category-classes .swiper-button-prev, .category-classes .swiper-rtl .swiper-button-next {
+    left: 0; }
 
 /*# sourceMappingURL=style.css.map */

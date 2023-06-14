@@ -158,6 +158,7 @@ $(document).ready(function () {
     })
 
     //video js(trailer modal)
+
     let video = videojs("my-video");
     const myModalEl = document.getElementById('trailerModal');
     let overlay;
@@ -226,4 +227,20 @@ $(document).ready(function () {
             },
         },
     });
+
+    //scrollspy
+
+    // Hide Header on scroll down
+    let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = function () {
+        let navbarCoursesTab = $('#navbar-courses-tab');
+        let navbarHeight = jQuery('header').outerHeight();
+        let currentScrollPos = window.pageYOffset;
+        if (currentScrollPos > navbarCoursesTab.offset().top) {
+            navbarCoursesTab.addClass('position-sticky');
+            navbarCoursesTab.css({'top': navbarHeight})
+            prevScrollPos = currentScrollPos;
+        }
+    }
 })

@@ -536,7 +536,7 @@ input:focus {
   text-transform: capitalize;
 }
 
-#faqAccordion {
+.faqAccordion {
 
   .accordion-item {
     margin-bottom: 5px;
@@ -557,6 +557,8 @@ input:focus {
       overflow: hidden;
       box-shadow: none;
       padding: 1.2rem;
+      display: block;
+      padding-right: 3rem;
       white-space: nowrap;
 
       &:focus {
@@ -567,6 +569,8 @@ input:focus {
         content: '\f078';
         font-family: "Font Awesome 6 Pro";
         background: none;
+        position: absolute;
+        right: 1rem;
       }
 
       &:not(.collapsed)::after {

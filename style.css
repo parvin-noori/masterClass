@@ -275,30 +275,34 @@ input:focus {
   font-size: 1.2rem;
   text-transform: capitalize; }
 
-#faqAccordion .accordion-item {
+.faqAccordion .accordion-item {
   margin-bottom: 5px;
   border: none;
   background-color: var(--primary);
   color: white;
   border-radius: 0.5rem;
   cursor: pointer; }
-  #faqAccordion .accordion-item:hover {
+  .faqAccordion .accordion-item:hover {
     opacity: 0.9; }
-  #faqAccordion .accordion-item .accordion-button {
+  .faqAccordion .accordion-item .accordion-button {
     background: transparent;
     color: inherit;
     text-overflow: ellipsis;
     overflow: hidden;
     box-shadow: none;
     padding: 1.2rem;
+    display: block;
+    padding-right: 3rem;
     white-space: nowrap; }
-    #faqAccordion .accordion-item .accordion-button:focus {
+    .faqAccordion .accordion-item .accordion-button:focus {
       box-shadow: none; }
-    #faqAccordion .accordion-item .accordion-button:after {
+    .faqAccordion .accordion-item .accordion-button:after {
       content: '\f078';
       font-family: "Font Awesome 6 Pro";
-      background: none; }
-    #faqAccordion .accordion-item .accordion-button:not(.collapsed)::after {
+      background: none;
+      position: absolute;
+      right: 1rem; }
+    .faqAccordion .accordion-item .accordion-button:not(.collapsed)::after {
       content: '\f077';
       font-family: "Font Awesome 6 Pro"; }
 

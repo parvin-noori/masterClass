@@ -5,7 +5,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Figtree, IranSans; }
+  font-family: Figtree, IranSans;
+  line-height: 1.5; }
 
 a {
   text-decoration: none;
@@ -537,5 +538,10 @@ video {
 
 .vjs-poster img {
   width: 100%; }
+
+.category-classes-swiper .swiper-button-next, .category-classes-swiper .swiper-rtl .swiper-button-prev {
+  right: 0; }
+.category-classes-swiper .swiper-button-prev, .category-classes-swiper .swiper-rtl .swiper-button-next {
+  left: 0; }
 
 /*# sourceMappingURL=style.css.map */

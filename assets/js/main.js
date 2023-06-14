@@ -184,7 +184,7 @@ $(document).ready(function () {
     let video2 = videojs("video2");
 
     video2.ready(function () {
-        overlay=$('#'+$(this).attr('id')).closest('.video-wrapper').find('.overlay')
+        overlay = $('#' + $(this).attr('id')).closest('.video-wrapper').find('.overlay')
         video2.vhs = null;
 
     });
@@ -196,4 +196,34 @@ $(document).ready(function () {
         overlay.addClass('d-flex');
         overlay.removeClass('d-none')
     })
+
+    //category classes swiper
+    var swiper = new Swiper(".category-classes-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        navigation: {
+            nextEl: ".category-classes-swiper-next",
+            prevEl: ".category-classes-swiper-prev",
+        },
+        breakpoints: {
+            0:{
+                slidesPerView: 1.1,
+            },
+            574: {
+                slidesPerView: 2,
+            },
+            640: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+            992: {
+                slidesPerView: 5,
+            },
+            1200: {
+                slidesPerView: 6,
+            },
+        },
+    });
 })

@@ -453,16 +453,9 @@ video {
     border-radius: 0;
     color: #6c757d !important; }
     .courses-tab #navbar-courses-tab ul a.nav-link.active {
-      position: relative;
       background-color: transparent;
-      color: var(--primary) !important; }
-      .courses-tab #navbar-courses-tab ul a.nav-link.active:after {
-        content: '';
-        border-bottom: 2px solid var(--primary);
-        width: 100%;
-        position: absolute;
-        bottom: -2px;
-        left: 0; }
+      color: var(--primary) !important;
+      border-color: var(--primary) !important; }
 
 .video-button-item {
   background-color: var(--primary) !important;

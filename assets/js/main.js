@@ -233,6 +233,7 @@ $(document).ready(function () {
         // Hide Header on scroll down
         let prevScrollPos = window.pageYOffset;
         let navbarHeight = $('header').outerHeight();
+        var $sections = jQuery(jQuery("#navbar-courses-tab .tab-pane").get().reverse());
 
         let PSHeight = $('#navbar-courses-tab').outerHeight()
         window.onscroll = function () {
@@ -267,6 +268,33 @@ $(document).ready(function () {
 
                 });
 
+            });
+
+            // Listen for scroll events
+            jQuery(window).on('scroll', function () {
+
+                // Get the current scroll position
+                var scrollPosition = jQuery(this).scrollTop();
+
+                // Loop through the sections to find which one is currently visible
+                $sections.each(function () {
+                    var sectionTop;
+                        sectionTop = jQuery(this).offset().top - (navbarHeight  + PSHeight + 10);
+
+                    // Check if the section is visible
+                    if (scrollPosition >= sectionTop) {
+                        // Get the id of the current sectionn
+
+                        var id = jQuery(this).attr('id');
+
+                        // Set the active link
+                        $navigationLinks.removeClass('active');
+                        jQuery('nav a[href="#' + id + '"]').addClass('active');
+
+                        // Break the loop
+                        return false;
+                    }
+                });
             });
 
         }

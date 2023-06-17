@@ -863,18 +863,18 @@ video {
         color: #6c757d !important;
 
         &.active {
-          position: relative;
+          //position: relative;
           background-color: transparent;
           color: var(--primary) !important;
+            border-color:  var(--primary) !important;
 
-          &:after {
-            content: '';
-            border-bottom: 2px solid var(--primary);
-            width: 100%;
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-          }
+          //&:after {
+          //  content: '';
+          //  width: 100%;
+          //  position: absolute;
+          //  bottom: -2px;
+          //  left: 0;
+          //}
         }
       }
     }

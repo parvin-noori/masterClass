@@ -1069,3 +1069,22 @@ span.error-message {
 input.error-message {
   border-color: red !important;
 }
+@media (min-width: 992px) {
+  .Details_scrollOuter-accordion{
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    #faqAccordion2{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .Details_scrollOuter-accordion{
+    max-height: 25rem;
+    overflow-y: auto;
+  }
+}

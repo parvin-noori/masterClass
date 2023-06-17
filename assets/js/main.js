@@ -164,6 +164,7 @@ $(document).ready(function () {
     let overlay;
     myModalEl.addEventListener('shown.bs.modal', event => {
         overlay = $(this).find('.overlay');
+
         video.ready(function () {
             // this.play();
             video.vhs = null;

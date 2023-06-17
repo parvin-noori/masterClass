@@ -564,4 +564,21 @@ video {
   min-width: 0 !important;
   padding: 0 !important; }
 
+.video-js .vjs-control:focus, .video-js .vjs-control:focus:before, .video-js .vjs-control:hover:before {
+  text-shadow: none !important; }
+
+.vjs-menu {
+  min-width: 10rem;
+  width: auto; }
+  .vjs-menu .vjs-menu-content {
+    background-color: #000 !important; }
+    .vjs-menu .vjs-menu-content .vjs-menu-item {
+      text-transform: uppercase;
+      padding: 0.5rem 0; }
+      .vjs-menu .vjs-menu-content .vjs-menu-item.vjs-texttrack-settings {
+        display: none; }
+      .vjs-menu .vjs-menu-content .vjs-menu-item.vjs-selected {
+        color: white !important;
+        background-color: rgba(43, 51, 63, 0.7) !important; }
+
 /*# sourceMappingURL=style.css.map */

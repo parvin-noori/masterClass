@@ -356,16 +356,17 @@ input:focus {
         font-size: 1.3rem; }
       .hero-section .hero-section-content .button--link:hover {
         opacity: .8; }
-    .hero-section .hero-section-content .signUpBtn {
-      padding: 0.8rem 2rem;
-      color: white !important;
-      border-radius: 10px;
-      text-transform: capitalize;
-      background-color: var(--secondary);
-      font-weight: bold;
-      text-transform: capitalize; }
-      .hero-section .hero-section-content .signUpBtn:hover {
-        filter: contrast(0.9); }
+
+.signUpBtn {
+  padding: 0.8rem 2rem;
+  color: white !important;
+  border-radius: 10px;
+  text-transform: capitalize;
+  background-color: var(--secondary);
+  font-weight: bold;
+  text-transform: capitalize; }
+  .signUpBtn:hover {
+    filter: contrast(0.9); }
 
 @media (min-width: 1400px) {
   .hero-section-content {
@@ -608,5 +609,7 @@ input.error-message {
   .Details_scrollOuter-accordion {
     max-height: 25rem;
     overflow-y: auto; } }
+#subscription .btn {
+  padding: 12px 0; }
 
 /*# sourceMappingURL=style.css.map */

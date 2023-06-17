@@ -676,19 +676,19 @@ input:focus {
       }
     }
 
-    .signUpBtn {
-      @include button;
-      background-color: var(--secondary);
-      font-weight: bold;
-      text-transform: capitalize;
 
-      &:hover {
-        filter: contrast(.9);
-      }
-    }
   }
 }
+.signUpBtn {
+  @include button;
+  background-color: var(--secondary);
+  font-weight: bold;
+  text-transform: capitalize;
 
+  &:hover {
+    filter: contrast(.9);
+  }
+}
 //@media (min-width: 992px) {
 //  .hero-section {
 //    .hero-section-content{
@@ -1086,5 +1086,10 @@ input.error-message {
   .Details_scrollOuter-accordion{
     max-height: 25rem;
     overflow-y: auto;
+  }
+}
+#subscription{
+  .btn{
+    padding: 12px 0;
   }
 }

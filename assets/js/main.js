@@ -158,49 +158,54 @@ $(document).ready(function () {
     })
 
     //video js(trailer modal)
+    if ($('#my-video').length > 0) {
+        var video = videojs("my-video");
+        const myModalEl = document.getElementById('trailerModal');
+        let overlay;
+        myModalEl.addEventListener('shown.bs.modal', event => {
+            overlay = $(this).find('.overlay');
 
-    let video = videojs("my-video");
-    const myModalEl = document.getElementById('trailerModal');
-    let overlay;
-    myModalEl.addEventListener('shown.bs.modal', event => {
-        overlay = $(this).find('.overlay');
+            video.ready(function () {
+                // this.play();
+                video.vhs = null;
 
-        video.ready(function () {
-            // this.play();
-            video.vhs = null;
+            });
+            video.on("play", function () {
+                overlay.addClass('d-none');
+                overlay.removeClass('d-flex')
+            });
+            video.on("pause", function () {
+                overlay.addClass('d-flex');
+                overlay.removeClass('d-none')
+            })
+            //
+        })
+
+    }
+
+
+    if ($('#video2').length > 0) {
+        //video js(about this class)
+        let video2 = videojs("video2");
+
+        video2.ready(function () {
+            overlay = $('#' + $(this).attr('id')).closest('.video-wrapper').find('.overlay')
+            video2.vhs = null;
 
         });
-        video.on("play", function () {
+        video2.on("play", function () {
             overlay.addClass('d-none');
             overlay.removeClass('d-flex')
         });
-        video.on("pause", function () {
+        video2.on("pause", function () {
             overlay.addClass('d-flex');
             overlay.removeClass('d-none')
         })
-        //
-    })
+    }
 
-
-    //video js(about this class)
-    let video2 = videojs("video2");
-
-    video2.ready(function () {
-        overlay = $('#' + $(this).attr('id')).closest('.video-wrapper').find('.overlay')
-        video2.vhs = null;
-
-    });
-    video2.on("play", function () {
-        overlay.addClass('d-none');
-        overlay.removeClass('d-flex')
-    });
-    video2.on("pause", function () {
-        overlay.addClass('d-flex');
-        overlay.removeClass('d-none')
-    })
 
     //category classes swiper
-    var swiper = new Swiper(".category-classes-swiper", {
+     new Swiper(".category-classes-swiper", {
         slidesPerView: 1,
         spaceBetween: 15,
         navigation: {
@@ -235,93 +240,101 @@ $(document).ready(function () {
     let prevScrollPos = window.pageYOffset;
     let navbarHeight = $('header').outerHeight();
     var $sections = jQuery(jQuery("#navbar-courses-tab .tab-pane").get().reverse());
-
-    let PSHeight = $('#navbar-courses-tab').outerHeight();
     let navbarCoursesTab = $('#navbar-courses-tab');
-    let courseTabOffsetTop=navbarCoursesTab.offset().top
-    window.onscroll = function () {
-        let currentScrollPos = window.pageYOffset;
-        if (currentScrollPos > courseTabOffsetTop-navbarHeight) {
-            navbarCoursesTab.addClass('position-sticky');
-            navbarCoursesTab.css({'top': navbarHeight});
-            prevScrollPos = currentScrollPos;
-        } else {
-            navbarCoursesTab.removeClass('position-sticky');
+
+    if(navbarCoursesTab.length>0){
+    let PSHeight = navbarCoursesTab.outerHeight();
+    let courseTabOffsetTop = navbarCoursesTab.offset().top
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (currentScrollPos > courseTabOffsetTop - navbarHeight) {
+                navbarCoursesTab.addClass('position-sticky');
+                navbarCoursesTab.css({'top': navbarHeight});
+                prevScrollPos = currentScrollPos;
+            } else {
+                navbarCoursesTab.removeClass('position-sticky');
+
+            }
+        }
+
+
+        //scrollspy
+        // Cache the navigation links
+        var $navigationLinks = jQuery('#navbar-courses-tab ul.nav li a');
+
+
+        if (navbarCoursesTab.length > 0) {
+            // Add click handlers to the navigation links
+            $navigationLinks.on('click', function (event) {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+                // Store the hash (#)
+                var hash = this.hash;
+                jQuery('html, body').animate({
+                    scrollTop: jQuery(hash).offset().top - (navbarHeight + PSHeight) // subtract the fixed header height and some padding
+
+                }, 300, function () {
+
+                });
+
+            });
+
+            // Listen for scroll events
+            jQuery(window).on('scroll', function () {
+
+                // Get the current scroll position
+                var scrollPosition = jQuery(this).scrollTop();
+
+                // Loop through the sections to find which one is currently visible
+                $sections.each(function () {
+                    var sectionTop;
+                    sectionTop = jQuery(this).offset().top - (navbarHeight + PSHeight + 10);
+
+                    // Check if the section is visible
+                    if (scrollPosition >= sectionTop) {
+                        // Get the id of the current sectionn
+
+                        var id = jQuery(this).attr('id');
+
+                        // Set the active link
+                        $navigationLinks.removeClass('active');
+                        jQuery('nav a[href="#' + id + '"]').addClass('active');
+
+                        // Break the loop
+                        return false;
+                    }
+                });
+            });
 
         }
     }
 
 
-    //scrollspy
-    // Cache the navigation links
-    var $navigationLinks = jQuery('#navbar-courses-tab ul.nav li a');
 
-
-    if (navbarCoursesTab.length > 0) {
-        // Add click handlers to the navigation links
-        $navigationLinks.on('click', function (event) {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-            // Store the hash (#)
-            var hash = this.hash;
-            jQuery('html, body').animate({
-                scrollTop: jQuery(hash).offset().top - (navbarHeight + PSHeight) // subtract the fixed header height and some padding
-
-            }, 300, function () {
-
-            });
-
-        });
-
-        // Listen for scroll events
-        jQuery(window).on('scroll', function () {
-
-            // Get the current scroll position
-            var scrollPosition = jQuery(this).scrollTop();
-
-            // Loop through the sections to find which one is currently visible
-            $sections.each(function () {
-                var sectionTop;
-                sectionTop = jQuery(this).offset().top - (navbarHeight + PSHeight + 10);
-
-                // Check if the section is visible
-                if (scrollPosition >= sectionTop) {
-                    // Get the id of the current sectionn
-
-                    var id = jQuery(this).attr('id');
-
-                    // Set the active link
-                    $navigationLinks.removeClass('active');
-                    jQuery('nav a[href="#' + id + '"]').addClass('active');
-
-                    // Break the loop
-                    return false;
-                }
-            });
-        });
-
-    }
 
     //email input validation
     let emailCaptureForm = $("#emailCaptureForm");
-    emailCaptureForm.validate({
-        errorClass: "error-message",
-        validClass: "my-valid-class",
-        errorElement: 'span',
-        errorPlacement: function (error, element) {
-            error.insertAfter($(element).parents('.email-wrapper'));
-        },
-        rules: {
-            emailInput: {
-                required: true,
+    if(emailCaptureForm.length>0){
+        emailCaptureForm.validate({
+            errorClass: "error-message",
+            validClass: "my-valid-class",
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+                error.insertAfter($(element).parents('.email-wrapper'));
             },
-            action: "required"
-        },
-        messages: {
-            emailInput: {
-                required: "وارد کردن ایمیل الزامی ست",
+            rules: {
+                emailInput: {
+                    required: true,
+                },
+                action: "required"
             },
+            messages: {
+                emailInput: {
+                    required: "وارد کردن ایمیل الزامی ست",
+                },
 
-        }
-    });
+            }
+        });
+    }
+
 });

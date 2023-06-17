@@ -612,4 +612,7 @@ input.error-message {
 #subscription .btn {
   padding: 12px 0; }
 
+.btn:active {
+  border-color: transparent !important; }
+
 /*# sourceMappingURL=style.css.map */

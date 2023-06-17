@@ -538,6 +538,10 @@ input:focus {
 
 #navbar-courses-tab {
   z-index: 10;
+
+  &.position-sticky {
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  }
 }
 
 .faqAccordion {
@@ -841,7 +845,7 @@ video {
     #navbar-courses-tab {
       ul {
         a.nav-link {
-          padding: 1rem 2rem;
+          padding: 1rem;
         }
       }
     }
@@ -857,6 +861,11 @@ video {
       flex-wrap: nowrap;
       overflow-x: auto;
       overflow-y: hidden;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       a.nav-link {
         border-radius: 0;
@@ -1026,30 +1035,37 @@ video {
 .video-js .vjs-control:focus, .video-js .vjs-control:focus:before, .video-js .vjs-control:hover:before {
   text-shadow: none !important;
 }
-.vjs-menu{
+
+.vjs-menu {
   min-width: 10rem;
   width: auto;
+
   .vjs-menu-content {
-    background-color: #000!important;
+    background-color: #000 !important;
+
     .vjs-menu-item {
       text-transform: uppercase;
       padding: 0.5rem 0;
+
       &.vjs-texttrack-settings {
         display: none;
       }
-      &.vjs-selected{
-        color: white!important;
-        background-color: rgba(43,51,63,.7)!important;
+
+      &.vjs-selected {
+        color: white !important;
+        background-color: rgba(43, 51, 63, .7) !important;
 
       }
     }
   }
 }
-span.error-message{
+
+span.error-message {
   color: red;
   font-size: small;
   margin-top: 5px;
 }
-input.error-message{
-  border-color: red!important;
+
+input.error-message {
+  border-color: red !important;
 }

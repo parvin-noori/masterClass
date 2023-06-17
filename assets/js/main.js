@@ -235,14 +235,18 @@ $(document).ready(function () {
     let navbarHeight = $('header').outerHeight();
     var $sections = jQuery(jQuery("#navbar-courses-tab .tab-pane").get().reverse());
 
-    let PSHeight = $('#navbar-courses-tab').outerHeight()
+    let PSHeight = $('#navbar-courses-tab').outerHeight();
+    let navbarCoursesTab = $('#navbar-courses-tab');
+    let courseTabOffsetTop=navbarCoursesTab.offset().top
     window.onscroll = function () {
-        let navbarCoursesTab = $('#navbar-courses-tab');
         let currentScrollPos = window.pageYOffset;
-        if (currentScrollPos > navbarCoursesTab.offset().top) {
+        if (currentScrollPos > courseTabOffsetTop-navbarHeight) {
             navbarCoursesTab.addClass('position-sticky');
-            navbarCoursesTab.css({'top': navbarHeight})
+            navbarCoursesTab.css({'top': navbarHeight});
             prevScrollPos = currentScrollPos;
+        } else {
+            navbarCoursesTab.removeClass('position-sticky');
+
         }
     }
 
@@ -251,8 +255,6 @@ $(document).ready(function () {
     // Cache the navigation links
     var $navigationLinks = jQuery('#navbar-courses-tab ul.nav li a');
 
-
-    let navbarCoursesTab = jQuery('#navbar-courses-tab');
 
     if (navbarCoursesTab.length > 0) {
         // Add click handlers to the navigation links

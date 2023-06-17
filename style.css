@@ -274,6 +274,8 @@ input:focus {
 
 #navbar-courses-tab {
   z-index: 10; }
+  #navbar-courses-tab.position-sticky {
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset; }
 
 .faqAccordion .accordion-item {
   margin-bottom: 5px;
@@ -438,14 +440,20 @@ video {
     padding: 1rem 3rem; } }
 @media (max-width: 768px) {
   .courses-tab #navbar-courses-tab ul a.nav-link {
-    padding: 1rem 2rem; } }
+    padding: 1rem; } }
 .courses-tab #navbar-courses-tab ul {
   border-width: 2px !important;
   margin: 0 !important;
   white-space: nowrap;
   flex-wrap: nowrap;
   overflow-x: auto;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+  .courses-tab #navbar-courses-tab ul::-webkit-scrollbar {
+    display: none; }
   .courses-tab #navbar-courses-tab ul a.nav-link {
     border-radius: 0;
     color: #6c757d !important; }

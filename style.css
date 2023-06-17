@@ -560,4 +560,8 @@ video {
   .category-classes .swiper-button-prev, .category-classes .swiper-rtl .swiper-button-next {
     left: 0; }
 
+.video-js .vjs-time-control.vjs-time-divider {
+  min-width: 0 !important;
+  padding: 0 !important; }
+
 /*# sourceMappingURL=style.css.map */

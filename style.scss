@@ -857,24 +857,17 @@ video {
       flex-wrap: nowrap;
       overflow-x: auto;
       overflow-y: hidden;
+
       a.nav-link {
         border-radius: 0;
 
         color: #6c757d !important;
 
         &.active {
-          //position: relative;
           background-color: transparent;
           color: var(--primary) !important;
-            border-color:  var(--primary) !important;
+          border-color: var(--primary) !important;
 
-          //&:after {
-          //  content: '';
-          //  width: 100%;
-          //  position: absolute;
-          //  bottom: -2px;
-          //  left: 0;
-          //}
         }
       }
     }
@@ -1020,4 +1013,12 @@ video {
   .swiper-button-prev, .swiper-rtl .swiper-button-next {
     left: 0;
   }
+}
+
+.video-js {
+  .vjs-time-control.vjs-time-divider{
+    min-width: 0!important;
+    padding: 0!important;
+  }
+
 }

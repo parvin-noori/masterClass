@@ -50,7 +50,7 @@ input:focus {
 }
 
 .btn {
-  border: none !important;
+  //border: none !important;
 }
 
 .dropdown-toggle {
@@ -1044,4 +1044,12 @@ video {
       }
     }
   }
+}
+span.error-message{
+  color: red;
+  font-size: small;
+  margin-top: 5px;
+}
+input.error-message{
+  border-color: red!important;
 }

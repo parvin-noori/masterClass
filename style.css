@@ -26,9 +26,6 @@ input:focus {
 .slider img {
   width: 100%; }
 
-.btn {
-  border: none !important; }
-
 .dropdown-toggle:after {
   display: none; }
 
@@ -580,5 +577,13 @@ video {
       .vjs-menu .vjs-menu-content .vjs-menu-item.vjs-selected {
         color: white !important;
         background-color: rgba(43, 51, 63, 0.7) !important; }
+
+span.error-message {
+  color: red;
+  font-size: small;
+  margin-top: 5px; }
+
+input.error-message {
+  border-color: red !important; }
 
 /*# sourceMappingURL=style.css.map */

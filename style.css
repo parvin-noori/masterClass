@@ -144,7 +144,8 @@ input:focus {
 .swiper-pagination .swiper-pagination-bullet {
   width: 5px;
   height: 5px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  transition: all 0.3s; }
   .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: 1.5rem;
     background-color: var(--secondary); }
@@ -362,7 +363,7 @@ input:focus {
   color: white !important;
   border-radius: 10px;
   text-transform: capitalize;
-  background-color: var(--secondary);
+  background-color: var(--secondary) !important;
   font-weight: bold;
   text-transform: capitalize; }
   .signUpBtn:hover {

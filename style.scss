@@ -302,6 +302,7 @@ input:focus {
     width: 5px;
     height: 5px;
     border-radius: 10px;
+    transition: all 0.3s;
 
     &.swiper-pagination-bullet-active {
       width: 1.5rem;
@@ -681,7 +682,7 @@ input:focus {
 }
 .signUpBtn {
   @include button;
-  background-color: var(--secondary);
+  background-color: var(--secondary)!important;
   font-weight: bold;
   text-transform: capitalize;
 

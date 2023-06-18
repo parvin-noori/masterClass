@@ -166,7 +166,7 @@ $(document).ready(function () {
             overlay = $(this).find('.overlay');
 
             video.ready(function () {
-                // this.play();
+                this.play();
                 video.vhs = null;
 
             });
@@ -189,10 +189,11 @@ $(document).ready(function () {
         let video2 = videojs("video2");
 
         video2.ready(function () {
-            overlay = $('#' + $(this).attr('id')).closest('.video-wrapper').find('.overlay')
+            overlay = $('#' + $(this).attr('id')).closest('.video-wrapper').find('.overlay');
             video2.vhs = null;
 
         });
+
         video2.on("play", function () {
             overlay.addClass('d-none');
             overlay.removeClass('d-flex')

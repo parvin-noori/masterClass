@@ -195,6 +195,9 @@ input:focus {
 
   position: relative;
 
+  img {
+    transition: all 0.3s;
+  }
 
   .trendingSlideContent {
     position: absolute;
@@ -208,6 +211,13 @@ input:focus {
     text-align: center;
 
 
+  }
+
+  &:hover {
+    cursor: pointer;
+    img {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -680,9 +690,10 @@ input:focus {
 
   }
 }
+
 .signUpBtn {
   @include button;
-  background-color: var(--secondary)!important;
+  background-color: var(--secondary) !important;
   font-weight: bold;
   text-transform: capitalize;
 
@@ -690,6 +701,7 @@ input:focus {
     filter: contrast(.9);
   }
 }
+
 //@media (min-width: 992px) {
 //  .hero-section {
 //    .hero-section-content{
@@ -1070,12 +1082,14 @@ span.error-message {
 input.error-message {
   border-color: red !important;
 }
+
 @media (min-width: 992px) {
-  .Details_scrollOuter-accordion{
+  .Details_scrollOuter-accordion {
     flex-grow: 1;
     position: relative;
     overflow: hidden;
-    #faqAccordion2{
+
+    #faqAccordion2 {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -1083,17 +1097,24 @@ input.error-message {
     }
   }
 }
+
 @media (max-width: 992px) {
-  .Details_scrollOuter-accordion{
+  .Details_scrollOuter-accordion {
     max-height: 25rem;
     overflow-y: auto;
   }
 }
-#subscription{
-  .btn{
+
+#subscription {
+  .btn {
     padding: 12px 0;
   }
 }
-.btn:active{
-  border-color: transparent!important;
+
+.btn:active {
+  border-color: transparent !important;
+}
+
+.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  opacity: 1 !important;
 }

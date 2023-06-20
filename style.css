@@ -103,6 +103,8 @@ input:focus {
 .trendingSlide {
   border-radius: 1rem;
   position: relative; }
+  .trendingSlide img {
+    transition: all 0.3s; }
   .trendingSlide .trendingSlideContent {
     position: absolute;
     bottom: 0;
@@ -113,6 +115,10 @@ input:focus {
     align-items: center;
     color: white;
     text-align: center; }
+  .trendingSlide:hover {
+    cursor: pointer; }
+    .trendingSlide:hover img {
+      transform: scale(1.1); }
 
 .separator {
   width: 1rem;
@@ -615,5 +621,8 @@ input.error-message {
 
 .btn:active {
   border-color: transparent !important; }
+
+.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  opacity: 1 !important; }
 
 /*# sourceMappingURL=style.css.map */

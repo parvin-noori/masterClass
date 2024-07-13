@@ -1,6 +1,3 @@
-Here's a suggested README template for your redeveloped website from MasterClass:
-
----
 
 # MasterClass Redesigned
 
@@ -28,12 +25,12 @@ This project is a redeveloped version of the MasterClass website for practice, u
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/parvin-noori/masterclass-redesigned.git
+   git clone https://github.com/parvin-noori/masterClass.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd masterclass-redesigned
+   cd masterClass
    ```
 
 3. Open the `index.html` file in your web browser.
@@ -42,4 +39,4 @@ This project is a redeveloped version of the MasterClass website for practice, u
 
 Simply open the `index.html` file in a web browser to view the redesigned MasterClass website.
 
-![demo]()
+![demo](https://github.com/parvin-noori/masterClass/blob/master/assets/imgs/screenShot/smartmockups_masterClass.jpg)
